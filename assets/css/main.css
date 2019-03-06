@@ -1,0 +1,10 @@
+@font-face {
+    font-family: gothic;
+    src: url('../fonts/9serif UTM Alter Gothic.ttf');
+}
+
+.container-lucky-draw {
+    max-width: unset !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}

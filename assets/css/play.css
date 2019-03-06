@@ -1,0 +1,153 @@
+main .content {
+    background-image: url('../images/bg-lucky-draw.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    position: relative;
+}
+
+main .content .row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+html,
+body,
+.container-lucky-draw,
+.container-lucky-draw main {
+    height: 100%;
+}
+
+.logo-bestprice {
+    position: absolute;
+    top: 60px;
+    right: 0px;
+}
+
+.let-spin {
+    position: absolute;
+    top: 220px;
+    right: 295px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.duong-lucky-draw {
+    position: absolute;
+    top: 173px;
+    right: 0px;
+}
+
+.logo-bestprice img {
+    width: 100%;
+}
+
+.let-spin img {
+    width: 100%;
+}
+
+.duong-lucky-draw img {
+    width: 100%;
+}
+
+.arrow-award {
+    position: absolute;
+    top: 309px;
+    left: 273px;
+}
+
+.container-wheel .the_wheel {
+    left: 15px;
+    top: 20px;
+    position: relative;
+}
+
+.right-content {
+    position: relative;
+}
+
+.left-content.col-xs-6,
+.left-content.col-sm-6,
+.left-content.col-md-6,
+.left-content.col-lg-6 {
+    padding-left: 0px !important;
+}
+
+.modal-content {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    border: 0px;
+}
+
+#modal-price .modal-dialog {
+    width: 70%;
+    max-width: 70%;
+    height: 100%;
+    margin: 0px auto;
+}
+
+.award-ao-mua {
+    background-image: url('../images/price-img/ao-mua.png');
+}
+
+.award-balo {
+    background-image: url('../images/price-img/balo.png');
+}
+
+.award-binh-nuoc {
+    background-image: url('../images/price-img/binh-nuoc.png');
+}
+
+.award-du-thuyen {
+    background-image: url('../images/price-img/du-thuyen.png');
+}
+
+.award-mu-bao-hiem {
+    background-image: url('../images/price-img/mu-bao-hiem.png');
+}
+
+.award-tour-thai {
+    background-image: url('../images/price-img/tour-thai.png');
+}
+
+.award-ve-may-bay {
+    background-image: url('../images/price-img/ve-may-bay.png');
+}
+
+.award-vinpearl {
+    background-image: url('../images/price-img/vinpearl.png');
+}
+
+.award-voucher-1tr {
+    background-image: url('../images/price-img/voucher-1tr.png');
+}
+
+.award-voucher-100k {
+    background-image: url('../images/price-img/voucher-100k.png');
+}
+
+.award-voucher-200k {
+    background-image: url('../images/price-img/voucher-200k.png');
+}
+
+.award-voucher-500k {
+    background-image: url('../images/price-img/voucher-500k.png');
+}
+
+.btn-close {
+    text-align: right;
+    font-size: 40px;
+    opacity: 1;
+    color: white;
+    z-index: 9999;
+    position: absolute;
+    right: 0;
+}
+
+.btn-close:hover {
+    color: white;
+    opacity: 1;
+}
