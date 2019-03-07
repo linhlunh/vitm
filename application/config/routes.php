@@ -59,3 +59,4 @@ $route['get_radius'] = 'Play/get_radius';
 $route['get_name_awards'] = 'Play/get_name_awards';
 $route['send_email_award'] = 'Play/send_email_award';
 $route['saveUserEmail'] = 'Play/saveUserEmail';
+$route['register'] = 'Register_Vitm';

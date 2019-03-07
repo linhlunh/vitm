@@ -1,0 +1,170 @@
+body {
+    color: #fff;
+}
+
+.content-vitm ul {
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+.content-vitm ul li {
+    margin-left: -0px;
+}
+
+.content-vitm ul li:before {
+    content: "-";
+    margin-left: -15px;
+}
+
+.content-vitm .container {
+    background-image: url('../images/register-vitm/bg-register-vitm.png');
+    background-repeat: no-repeat;
+    max-width: 1100px !important;
+    padding-top: 50px;
+}
+
+.content-vitm h1,
+.content-vitm h2,
+.content-vitm h3 {
+    color: #fff100;
+    text-align: center;
+    font-weight: 900;
+}
+
+.price-vitm img {
+    max-width: -webkit-fill-available;
+}
+
+.notification * {
+    display: none;
+}
+
+.container .title-vitm {
+    font-size: 80px;
+}
+
+.content-vitm .vitm-rules {
+    margin-top: 60px;
+}
+
+.content-vitm .vitm-rules b {
+    font-size: 25px;
+}
+
+.content-vitm .rules-detail {
+    font-size: 25px;
+}
+
+.content-vitm .title-form-register {
+    font-size: 55px;
+}
+
+.content-vitm #frm_register_vitm {
+    text-align: center;
+}
+
+.content-vitm #frm_register_vitm input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 90%;
+    height: 60px;
+    text-align: center;
+    font-size: 30px;
+    background-color: #ed6730;
+    color: #fff;
+    border: 3px solid #00ffff;
+}
+
+.content-vitm #frm_register_vitm input::placeholder {
+    color: #fff;
+}
+
+.content-vitm #frm_register_vitm #btn_render_code {
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 60px;
+    text-align: center;
+    font-size: 30px;
+    background-color: #ed6730;
+    color: #fff;
+    border: 3px solid #00ffff;
+}
+
+.content-vitm .price-vitm-title {
+    margin-top: 90px;
+    font-size: 45px;
+}
+
+.content-vitm .price-vitm {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 30px;
+}
+
+.content-vitm .footer-vitm {
+    margin-top: 25px;
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+.content-vitm .midle-vitm .wheel {
+    margin-top: -10px;
+    margin-left: 22.5%;
+}
+
+.content-vitm .midle-vitm .wheel img {
+    width: 75%;
+    position: absolute;
+}
+
+@media only screen and (min-width: 768px) {
+    .midle-vitm .left {
+        max-width: 28%;
+        flex: 28%;
+    }
+    .midle-vitm .midle {
+        max-width: 42%;
+        flex: 42%;
+    }
+    .midle-vitm .right {
+        max-width: 30%;
+        flex: 30%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .content-vitm .title-vitm {
+        font-size: 30px;
+    }
+    .content-vitm .title-form-register {
+        font-size: 28px;
+    }
+    .content-vitm .vitm-rules b {
+        font-size: 20px;
+    }
+    .content-vitm .rules-detail {
+        font-size: 16px;
+    }
+    .content-vitm .midle-vitm .wheel {
+        display: none;
+    }
+    .content-vitm .price-vitm-title {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+    .content-vitm .footer-vitm {
+        font-size: 13px;
+        margin-top: 15px;
+    }
+    .content-vitm .vitm-rules {
+        margin-top: 30px;
+    }
+    .content-vitm #frm_register_vitm input {
+        height: 40px;
+        font-size: 20px;
+    }
+    .content-vitm #frm_register_vitm #btn_render_code {
+        height: 40px;
+        font-size: 20px;
+    }
+}
