@@ -21,7 +21,7 @@ class Register_Vitm extends CI_Controller
         $data = array();
 
         $user_sess = $this->session->userdata('user');
-        
+
         $action = $this->input->post('action');
 
         $oauth_user_rules = array(
@@ -51,29 +51,35 @@ class Register_Vitm extends CI_Controller
 
                 $oauth_user = array(
                     'full_name' => $oauth_user_submit['full_name'],
-                    'email'     => $oauth_user_submit['email'],
-                    'phone'     => $oauth_user_submit['phone'],
+                    'email'     => trim($oauth_user_submit['email']),
+                    'phone'     => trim($oauth_user_submit['phone']),
                     'link'      => 'vitm',
                     'created'   =>  date('Y-m-d H:i:m'),
                     'modified'  =>  date('Y-m-d H:i:m'),
                 );
-                $insert_id = $this->Register_Vitm_Model->insert_oauth_user($oauth_user);
-             
-                if (!empty($insert_id)) {
 
-                    $oauth_user['event_code'] = 'VITM' . str_pad($insert_id, 4, '0', STR_PAD_LEFT);
+                if (!$this->Register_Vitm_Model->check_is_set_email_or_phone($oauth_user)) {
 
-                    $oauth_user['id'] = $insert_id;
-    
-                    $this->Register_Vitm_Model->update_oauth_user($oauth_user);
+                    $insert_id = $this->Register_Vitm_Model->insert_oauth_user($oauth_user);
 
-                    //$content_email = $this->load->view('landing_page/email_template', true);
+                    if (!empty($insert_id)) {
 
-                    //send_email_bestprice('from', $oauth_user['email'], 'subject', $content_email, '', '', '', '');
+                        $oauth_user['event_code'] = 'VITM' . str_pad($insert_id, 4, '0', STR_PAD_LEFT);
 
-                    //$this->send_sms_vitm($oauth_user, 'content');
+                        $oauth_user['id'] = $insert_id;
 
-                    echo('<script>alert("Mã đã gửi đến email và số điện thoại của bạn.")</script>');
+                        $this->Register_Vitm_Model->update_oauth_user($oauth_user);
+
+                        //$content_email = $this->load->view('landing_page/email_template', true);
+
+                        //send_email_bestprice('from', $oauth_user['email'], 'subject', $content_email, '', '', '', '');
+
+                        //$this->send_sms_vitm($oauth_user, 'content');
+
+                        echo ('<script>alert("Mã đã gửi đến email và số điện thoại của bạn.")</script>');
+                    }
+                } else {
+                    $data['exist_phone_or_email'] = true;
                 }
             }
         }

@@ -88,6 +88,9 @@
             </div>
         </div>
     </div>
+    <?php if($exist_phone_or_email){
+        echo '<script>alert("Số điện thoại hoặc email đã được sử dụng.")</script>';
+    } ?>
 </body>
 
 </html> 
