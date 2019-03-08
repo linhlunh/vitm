@@ -56,8 +56,6 @@ $(document).on('submit', '#frm_register_vitm', function() {
         $('#error_email').hide();
 
     }
-    console.log(check);
 
     return check;
-
 });

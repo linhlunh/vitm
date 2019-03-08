@@ -71,7 +71,6 @@ class Register_Vitm extends CI_Controller
 
                     //send_email_bestprice('from', $oauth_user['email'], 'subject', $content_email, '', '', '', '');
 
-
                     //$this->send_sms_vitm($oauth_user, 'content');
 
                     echo('<script>alert("Mã đã gửi đến email và số điện thoại của bạn.")</script>');

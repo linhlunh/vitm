@@ -5,6 +5,7 @@ body {
 .content-vitm ul {
     list-style-type: none;
     padding-left: 15px;
+    line-height: 36px;
 }
 
 .content-vitm ul li {
@@ -40,36 +41,37 @@ body {
 }
 
 .container .title-vitm {
-    font-size: 80px;
+    font-size: 76px;
 }
 
 .content-vitm .vitm-rules {
-    margin-top: 60px;
+    margin-top: 50px;
+    margin-left: 10px;
 }
 
 .content-vitm .vitm-rules b {
-    font-size: 25px;
+    font-size: 35px;
 }
 
 .content-vitm .rules-detail {
-    font-size: 25px;
+    font-size: 32px;
 }
 
 .content-vitm .title-form-register {
-    font-size: 55px;
+    font-size: 60px;
 }
 
-.content-vitm #frm_register_vitm {
-    text-align: center;
+.content-vitm #frm_register_vitm * {
+    margin-left: 3%;
 }
 
 .content-vitm #frm_register_vitm input {
     margin-top: 20px;
-    margin-bottom: 20px;
-    width: 90%;
-    height: 60px;
+    margin-bottom: 24px;
+    width: 89%;
+    height: 73px;
     text-align: center;
-    font-size: 30px;
+    font-size: 39px;
     background-color: #ed6730;
     color: #fff;
     border: 3px solid #00ffff;
@@ -80,19 +82,20 @@ body {
 }
 
 .content-vitm #frm_register_vitm #btn_render_code {
-    width: 60%;
+    width: 54%;
     margin-top: 20px;
     margin-bottom: 20px;
     height: 60px;
     text-align: center;
-    font-size: 30px;
+    font-size: 39px;
     background-color: #ed6730;
     color: #fff;
     border: 3px solid #00ffff;
+    margin-left: 18.5% !important;
 }
 
 .content-vitm .price-vitm-title {
-    margin-top: 90px;
+    margin-top: 120px;
     font-size: 45px;
 }
 
@@ -102,34 +105,34 @@ body {
 }
 
 .content-vitm .footer-vitm {
-    margin-top: 25px;
-    font-size: 25px;
+    margin-top: 13px;
+    font-size: 30px;
     padding-bottom: 20px;
+    line-height: 38px;
+    margin-left: 20px;
+}
+
+.content-vitm .midle-vitm {
+    margin-top: 42px;
 }
 
 .content-vitm .midle-vitm .wheel {
-    margin-top: -10px;
-    margin-left: 22.5%;
+    margin-top: -39px;
+    margin-left: -16%;
 }
 
 .content-vitm .midle-vitm .wheel img {
-    width: 75%;
+    width: 109%;
     position: absolute;
 }
 
 @media only screen and (min-width: 768px) {
     .midle-vitm .left {
-        max-width: 28%;
-        flex: 28%;
+        flex: 0 0 25%;
+        max-width: 25%;
     }
-    .midle-vitm .midle {
-        max-width: 42%;
-        flex: 42%;
-    }
-    .midle-vitm .right {
-        max-width: 30%;
-        flex: 30%;
-    }
+    .midle-vitm .midle {}
+    .midle-vitm .right {}
 }
 
 @media only screen and (max-width: 767px) {

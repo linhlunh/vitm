@@ -16,51 +16,52 @@
 <body>
     <div class='content-vitm'>
         <div class="container">
-            <h1 class='title-vitm'>ĐĂNG KÝ LƯỢT QUAY SĂN DU LỊCH 0 ĐỒNG</h1>
+            <h1 class='title-vitm'><?=lang('title_vitm')?></h1>
             <div class='vitm-rules'>
-                <b>Thể lệ:</b>
+                <b><?=lang('rules')?></b>
                 <ul class='rules-detail'>
-                    <li> Người chơi đăng ký thông tin cá nhân để nhận mã lượt quay qua email và tin nhắn SMS.</li>
-                    <li> Người chơi cầm mã lượt quay đến bàn lễ tân tại gian hàng của BetsPrice tại hội chợ Du lịch Quốc tế (VITM) từ ngày 27/03/2019 - 30/03/2019 để đổi 1 lượt quay Săn du lịch 0 đồng</li>
+                    <li><?=lang('rule_1')?></li>
+                    <li><?=lang('rule_2')?></li>
                 </ul>
             </div>
-            <h2 class='title-form-register'>THÔNG TIN ĐĂNG KÝ</h2>
+            <h2 class='title-form-register'><?=lang('title_form_register')?></h2>
             <div class='midle-vitm'>
 
                 <div class="row">
-                    
-                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 left">
+
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 left">
                     </div>
-                    
-                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-12 midle">
+
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 midle">
                         <form id="frm_register_vitm" action="" method='post'>
-                            <input type="text" name="full_name" autocomplete="off" id="full_name" value="<?= set_value('full_name') ?>" placeholder="Họ tên">
+                            <input type="text" name="full_name" autocomplete="off" id="full_name" value="<?= set_value('full_name') ?>" placeholder="<?=lang('full_name')?>">
                             <div class="notification">
-                                <span class='error' id='error_full_name'>Họ tên không được để trống!</span>
+                                <span class='error' id='error_full_name'><?=lang('error_full_name')?></span>
                             </div>
-                            <input type="text" name="phone" id="phone" autocomplete='off' value="<?= set_value('phone') ?>" placeholder="Số điện thoại ">
+                            <input type="text" name="email" id="email" autocomplete='off' value="<?= set_value('email') ?>" placeholder="<?=lang('email')?>">
                             <div class="notification">
-                                <span class='error' id='error_phone'>Số điện thoại không được để trống!</span>
-                                <span class='error' id='error_wrong_phone'>Số điện thoại không đúng!</span>
+                                <span class='error' id='error_email'><?=lang('error_email')?></span>
+                                <span class='error' id='error_wrong_email'><?=lang('error_wrong_email')?></span>
                             </div>
-                            <input type="text" name="email" id="email" autocomplete='off' value="<?= set_value('email') ?>" placeholder="Email">
+                            <input type="text" name="phone" id="phone" autocomplete='off' value="<?= set_value('phone') ?>" placeholder="<?=lang('phone')?>">
                             <div class="notification">
-                                <span class='error' id='error_email'>Email không được để trống!</span>
-                                <span class='error' id='error_wrong_email'>Email không hợp lệ!</span>
+                                <span class='error' id='error_phone'><?=lang('error_phone')?></span>
+                                <span class='error' id='error_wrong_phone'><?=lang('error_wrong_phone')?></span>
                             </div>
-                            <button name='action' id='btn_render_code' type='submit' value='save'>Nhận mã</button>
+
+                            <button name='action' id='btn_render_code' type='submit' value='save'><?=lang('render_code')?></button>
                             <div></div>
                         </form>
                     </div>
 
-                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 right">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 right">
                         <div class='wheel'>
                             <img src="<?= ASSETS ?>images/register-vitm/vong-quay.png" alt="">
                         </div>
                     </div>
                 </div>
             </div>
-            <h3 class='price-vitm-title'>NHỮNG GIẢI THƯỞNG 0 ĐỒNG GIÁ TRỊ NHẤT</h3>
+            <h3 class='price-vitm-title'><?=lang('price_vitm_title')?></h3>
             <div class='price-vitm'>
                 <div class="row">
 
@@ -75,15 +76,15 @@
                 </div>
             </div>
             <div class='footer-vitm'>
-                <b class='company-name'>Thông tin Công ty Du lịch BestPrice</b>
+                <b class='company-name'><?=lang('bestprice_info')?></b>
                 <br />
-                <b>VP Hà Nội:</b> 12A ngõ Bà Triệu, Phố Bà Triệu, Q.Hai Bà Trưng
+                <b>VP Hà Nội:</b> <?=lang('ha_noi_office')?>
                 <br />
-                <b>VP HCM:</b> 95 Trần Quang Khải, Tân, Q1
+                <b>VP HCM:</b> <?=lang('hcm_office')?>
                 <br />
-                <b>Hotline:</b> 19006505 (Nhấn phím 0 để được trợ giúp)
+                <b>Hotline:</b> <?=lang('company_hotline')?>
                 <br />
-                <b>Email:</b> marketing@bestprice.vn
+                <b>Email:</b> <?=lang('company_email')?>
             </div>
         </div>
     </div>
