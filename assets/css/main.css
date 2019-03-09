@@ -3,6 +3,16 @@
     src: url('../fonts/9serif UTM Alter Gothic.ttf');
 }
 
+@font-face {
+    font-family: Arial-2;
+    src: url('../fonts/SVN-Arial-2.ttf');
+}
+
+@font-face {
+    font-family: Rush-Sans-Black;
+    src: url('../fonts/SVN-Nexa-Rush-Sans-Black.ttf');
+}
+
 .container-lucky-draw {
     max-width: unset !important;
     padding-left: 0px !important;

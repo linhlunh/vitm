@@ -20,10 +20,12 @@ class Register_Vitm extends CI_Controller
     {
         $data = array();
 
-        $user_sess = $this->session->userdata('user');
+        
+        $this->load->view('register_vitm_template/register_vitm_template', $data);
+    }
 
+    function submit_register_vitm(){
         $action = $this->input->post('action');
-
         $oauth_user_rules = array(
             array(
                 'field' => 'full_name',
@@ -47,8 +49,7 @@ class Register_Vitm extends CI_Controller
 
         if ($action == 'save') {
             if ($this->form_validation->run()) {
-                $oauth_user_submit = $this->input->post();
-
+            $oauth_user_submit = $this->input->post();
                 $oauth_user = array(
                     'full_name' => $oauth_user_submit['full_name'],
                     'email'     => trim($oauth_user_submit['email']),
@@ -70,25 +71,43 @@ class Register_Vitm extends CI_Controller
 
                         $this->Register_Vitm_Model->update_oauth_user($oauth_user);
 
-                        //$content_email = $this->load->view('landing_page/email_template', true);
+                        $data['content_email'] = $this->load->view('register_vitm_template/email_vitm_template', $oauth_user, true);
 
-                        //send_email_bestprice('from', $oauth_user['email'], 'subject', $content_email, '', '', '', '');
+                        $email_template = $this->load->view('email_template/email_award', $data, true);
 
-                        //$this->send_sms_vitm($oauth_user, 'content');
+                        $sms_content = 'BestPrice gui ma luot quay '. $oauth_user['event_code'].' de tham gia San Du Lich 0 Dong. Thong tin chi tiet LH: 19006505 hoac bestprice.vn';
 
-                        echo ('<script>alert("Mã đã gửi đến email và số điện thoại của bạn.")</script>');
+                        send_email_bestprice('marketing@bestprice.vn', $oauth_user['email'], 'BestPrice gửi mã lượt quay Săn du lịch 0đ', $email_template, '', '', '', '');
+
+                        //$this->send_sms_vitm($oauth_user, $sms_content);
+
+                        echo json_encode('true');
                     }
                 } else {
-                    $data['exist_phone_or_email'] = true;
+                    echo json_encode('false');
                 }
             }
         }
-        $this->load->view('register_vitm_template/register_vitm_template', $data);
+    }
+
+    function check_available_email_and_phone()
+    {
+        $oauth_user_submit = $this->input->post();
+        $oauth_user = array(
+            'full_name' => $oauth_user_submit['full_name'],
+            'email'     => trim($oauth_user_submit['email']),
+            'phone'     => trim($oauth_user_submit['phone']),
+            'link'      => 'vitm',
+            'created'   =>  date('Y-m-d H:i:m'),
+            'modified'  =>  date('Y-m-d H:i:m'),
+        );
+
+        echo json_encode($this->Register_Vitm_Model->check_is_set_email_or_phone($oauth_user) ? 'true': 'false');
     }
 
     private function is_email($email)
     {
-        return (preg_match("/^[A-Za-z0-9_\.]{6,32}@([a-zA-Z0-9]{2,12})(\.[a-zA-Z]{2,12})+$/", $email, $matches));
+        return (preg_match("/^[A-Za-z0-9_\.]{1,32}@([a-zA-Z0-9]{2,12})(\.[a-zA-Z]{2,12})+$/", $email, $matches));
     }
 
     private function is_phone($phone)

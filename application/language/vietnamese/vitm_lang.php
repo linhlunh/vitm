@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-$lang['full_name'] = 'Họ và tên';
+$lang['full_name'] = 'Họ tên';
 $lang['birthday'] = 'Ngày sinh';
 $lang['email'] = 'Email';
 $lang['phone'] = 'Số điện thoại';
@@ -13,7 +13,7 @@ $lang['rule_2'] = 'Người chơi cầm mã lượt quay đến bàn lễ tân t
 $lang['title_form_register'] = 'THÔNG TIN ĐĂNG KÝ';
 $lang['price_vitm_title'] = 'NHỮNG GIẢI THƯỞNG 0 ĐỒNG GIÁ TRỊ NHẤT';
 $lang['bestprice_info'] = 'Thông tin Công ty Du lịch BestPrice';
-$lang['ha_noi_office'] = '12A ngõ Bà Triệu, Phố Bà Triệu, Q.Hai Bà Trưng';
+$lang['ha_noi_office'] = '12A ngõ Bà Triệu, Phố Bà Triệu, Q.Hai Bà Trưng.';
 $lang['hcm_office'] = '95 Trần Quang Khải, Tân, Q1';
 $lang['company_hotline'] = '19006505 (Nhấn phím 0 để được trợ giúp)';
 $lang['company_email'] = 'marketing@bestprice.vn';

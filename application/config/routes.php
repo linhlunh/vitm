@@ -60,3 +60,4 @@ $route['get_name_awards'] = 'Play/get_name_awards';
 $route['send_email_award'] = 'Play/send_email_award';
 $route['saveUserEmail'] = 'Play/saveUserEmail';
 $route['register'] = 'Register_Vitm';
+$route['submit_register_vitm'] = 'Register_Vitm/submit_register_vitm';

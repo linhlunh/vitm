@@ -19,9 +19,9 @@ body {
 
 .content-vitm .container {
     background-image: url('../images/register-vitm/bg-register-vitm.png');
-    background-repeat: no-repeat;
     max-width: 1100px !important;
-    padding-top: 50px;
+    padding-top: 45px;
+    background-repeat: repeat-y;
 }
 
 .content-vitm h1,
@@ -30,6 +30,7 @@ body {
     color: #fff100;
     text-align: center;
     font-weight: 900;
+    font-family: Rush-Sans-Black;
 }
 
 .price-vitm img {
@@ -41,16 +42,18 @@ body {
 }
 
 .container .title-vitm {
-    font-size: 76px;
+    font-size: 74px;
+    margin-left: -20px;
 }
 
 .content-vitm .vitm-rules {
-    margin-top: 50px;
-    margin-left: 10px;
+    margin-top: 55px;
+    margin-left: 17px;
+    font-family: sans-serif;
 }
 
 .content-vitm .vitm-rules b {
-    font-size: 35px;
+    font-size: 33px;
 }
 
 .content-vitm .rules-detail {
@@ -58,23 +61,26 @@ body {
 }
 
 .content-vitm .title-form-register {
-    font-size: 60px;
+    font-size: 59px;
+    padding-top: 5px;
+    padding-left: 20px;
 }
 
-.content-vitm #frm_register_vitm * {
-    margin-left: 3%;
+.content-vitm #frm_register_vitm {
+    text-align: center;
 }
 
 .content-vitm #frm_register_vitm input {
     margin-top: 20px;
-    margin-bottom: 24px;
+    margin-bottom: 27px;
     width: 89%;
-    height: 73px;
+    height: 72px;
     text-align: center;
     font-size: 39px;
     background-color: #ed6730;
     color: #fff;
     border: 3px solid #00ffff;
+    padding-bottom: 13px;
 }
 
 .content-vitm #frm_register_vitm input::placeholder {
@@ -88,20 +94,24 @@ body {
     height: 60px;
     text-align: center;
     font-size: 39px;
-    background-color: #ed6730;
+    background-color: blue;
     color: #fff;
-    border: 3px solid #00ffff;
-    margin-left: 18.5% !important;
+    border: 0px solid #00ffff;
+    line-height: 20px;
+    padding-bottom: 10px;
+    cursor: pointer;
 }
 
 .content-vitm .price-vitm-title {
-    margin-top: 120px;
-    font-size: 45px;
+    margin-top: 131px;
+    font-size: 43px;
+    margin-left: 5px;
 }
 
 .content-vitm .price-vitm {
     border-bottom: 2px solid #fff;
-    padding-bottom: 30px;
+    padding-bottom: 36px;
+    margin-top: 20px;
 }
 
 .content-vitm .footer-vitm {
@@ -110,34 +120,75 @@ body {
     padding-bottom: 20px;
     line-height: 38px;
     margin-left: 20px;
+    font-family: sans-serif;
 }
 
 .content-vitm .midle-vitm {
-    margin-top: 42px;
+    margin-top: 49px;
 }
 
 .content-vitm .midle-vitm .wheel {
-    margin-top: -39px;
-    margin-left: -16%;
+    margin-top: -40px;
+    margin-left: -9%;
 }
 
 .content-vitm .midle-vitm .wheel img {
-    width: 109%;
+    width: 103%;
     position: absolute;
 }
 
-@media only screen and (min-width: 768px) {
+.price-vitm .img-below {
+    margin-top: -32px;
+}
+
+.content-vitm #btn_loading {
+    display: none;
+    line-height: 50px;
+}
+
+@media only screen and (min-width: 992px) {
     .midle-vitm .left {
-        flex: 0 0 25%;
-        max-width: 25%;
+        flex: 0 0 23.8%;
+        max-width: 23.8%;
     }
-    .midle-vitm .midle {}
-    .midle-vitm .right {}
+    .midle-vitm .midle {
+        flex: 0 0 49.7%;
+        max-width: 49.7%;
+    }
+    .midle-vitm .right {
+        flex: 0 0 26.5%;
+        max-width: 26.5%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .content-vitm .midle-vitm .wheel {
+        display: none;
+    }
+    .content-vitm .title-vitm {
+        font-size: 65px;
+        margin-left: 0px;
+    }
+    .content-vitm .vitm-rules {
+        margin-top: 40px;
+        margin-left: unset;
+    }
+    .content-vitm .rules-detail {
+        font-size: 27px;
+    }
+    .content-vitm .title-form-register {
+        font-size: 45px;
+        margin-left: unset;
+    }
+    .content-vitm .footer-vitm {
+        font-size: 26px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
     .content-vitm .title-vitm {
-        font-size: 30px;
+        font-size: 25px;
+        margin-left: 0px;
     }
     .content-vitm .title-form-register {
         font-size: 28px;
@@ -146,28 +197,64 @@ body {
         font-size: 20px;
     }
     .content-vitm .rules-detail {
-        font-size: 16px;
-    }
-    .content-vitm .midle-vitm .wheel {
-        display: none;
+        font-size: 14px;
     }
     .content-vitm .price-vitm-title {
-        font-size: 20px;
-        margin-top: 30px;
+        font-size: 18px;
+        margin-top: unset;
+        margin-left: 0px;
+        margin-bottom: unset;
     }
     .content-vitm .footer-vitm {
-        font-size: 13px;
+        font-size: 12px;
         margin-top: 15px;
     }
     .content-vitm .vitm-rules {
-        margin-top: 30px;
+        margin-top: 25px;
+        margin-left: 0px;
     }
     .content-vitm #frm_register_vitm input {
         height: 40px;
         font-size: 20px;
+        margin-bottom: 5px;
+        padding-bottom: 6px;
     }
     .content-vitm #frm_register_vitm #btn_render_code {
         height: 40px;
         font-size: 20px;
+        padding-bottom: 5px;
+    }
+    .content-vitm ul {
+        line-height: 25px;
+    }
+    .content-vitm .title-form-register {
+        font-size: 21px;
+        padding-left: 0px;
+    }
+    .content-vitm .midle-vitm {
+        margin-top: 15px;
+    }
+    .price-vitm .img-below {
+        padding-top: 35px;
+    }
+    .content-vitm .price-vitm {
+        margin-top: unset;
+        padding-bottom: 20px;
+    }
+    .content-vitm .footer-vitm {
+        line-height: 22px;
+        margin-left: unset;
+    }
+    .content-vitm ul li:before {
+        margin-left: -10px;
+    }
+    .price-vitm img {
+        max-width: -webkit-fill-available;
+        width: 49%;
+    }
+    @media only screen and (min-width: 576px) {
+        .price-vitm img {
+            width: 100%;
+        }
     }
 }
