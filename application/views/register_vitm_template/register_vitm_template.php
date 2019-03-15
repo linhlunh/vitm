@@ -63,7 +63,17 @@
                                 <span class='error' id='error_phone'><?= lang('error_phone') ?></span>
                                 <span class='error' id='error_wrong_phone'><?= lang('error_wrong_phone') ?></span>
                             </div>
-
+                            <?php if (!empty($show_captcha)) : ?>
+                            <div class='line-captcha'>
+                                <img id='img_captcha' src="<?= base_url() ?>/render_img_captcha" />
+                                <input class='input-captcha' type="text" placeholder='' id='captcha_code' name='captcha_code' autocomplete='off'>
+                                <i class="fa fa-refresh" id='btn_change_captcha' aria-hidden="true"></i>
+                            </div>
+                            <div class="notification">
+                                <span class='error' id='error_captcha_code'>Mời bạn điền mã xác nhận</span>
+                            </div>
+                            <div class='wrong_captcha'>Sai mã Captcha</div>
+                            <?php endif; ?>
                             <button name='action' id='btn_render_code' value='save'>
                                 <span class='content-btn-submit'><?= lang('render_code') ?></span>
                                 <span id='btn_loading'><i style='margin-right: 4px' class="fa fa-spinner fa-spin"></i>Đang gửi...</span>
@@ -81,27 +91,41 @@
             <h3 class='price-vitm-title'><?= lang('price_vitm_title') ?></h3>
             <div class='price-vitm'>
                 <div class="row">
-
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <img class='img-upper' src="<?= ASSETS ?>images/register-vitm/tour-thai-lan-1.png" alt="">
-                        <img class='img-below' src="<?= ASSETS ?>images/register-vitm/tour-du-thuyen-1.png" alt="">
+                        <img class='img-upper' src="<?= ASSETS ?>images/register-vitm/tour-thai-lan-13032019_914.png">
+                        <img class='img-below fix-img-pc' src="<?= ASSETS ?>images/register-vitm/tour-du-thuyen-13032019_914.png">
+                        <img class='img-upper fix-img-mobile' src="<?= ASSETS ?>images/register-vitm/nghi-duong-vinpearl.png">
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <img class='img-upper' src="<?= ASSETS ?>images/register-vitm/nghi-duong-vinpearl-1.png" alt="">
-                        <img class='img-below' src="<?= ASSETS ?>images/register-vitm/ve-may-bay-0-dong-1.png" alt="">
+                        <img class='img-below fix-img-mobile' src="<?= ASSETS ?>images/register-vitm/tour-du-thuyen-13032019_914.png">
+                        <img class='img-upper fix-img-pc' src="<?= ASSETS ?>images/register-vitm/nghi-duong-vinpearl.png">
+                        <img class='img-below' src="<?= ASSETS ?>images/register-vitm/ve-may-bay-0-dong-13032019_914.png">
                     </div>
                 </div>
             </div>
+            <div class='dash-footer-vitm'></div>
             <div class='footer-vitm'>
-                <b class='company-name'><?= lang('bestprice_info') ?></b>
-                <br />
+                <div class='company-name'>
+                    <b class='company-name'><?= lang('bestprice_info') ?></b>
+                </div>
                 <b>VP Hà Nội:</b> <?= lang('ha_noi_office') ?>
                 <br />
-                <b>VP HCM:</b> <?= lang('hcm_office') ?>
+                <b>VP Hồ Chí Minh:</b> <?= lang('hcm_office') ?>
                 <br />
                 <b>Hotline:</b> <?= lang('company_hotline') ?>
                 <br />
                 <b>Email:</b> <?= lang('company_email') ?>
+            </div>
+            <div class='dash-footer-vitm'></div>
+            <div class='donor-vitm'>
+                <div class='donor-vitm-title'> <b>Nhà tài trợ:</b></div>
+                <div>
+                    <img class='' src="<?= ASSETS ?>images/donor/list_donor_top.png">
+
+                </div>
+                <div>
+                    <img class='' src="<?= ASSETS ?>images/donor/list_donor_bottom.png">
+                </div>
             </div>
         </div>
     </div>

@@ -18,7 +18,7 @@ body {
 }
 
 .content-vitm .container {
-    background-image: url('../images/register-vitm/bg-register-vitm.png');
+    background-image: url('../images/register-vitm/bg-register-vitm-12032019-1623.png');
     max-width: 1100px !important;
     padding-top: 45px;
     background-repeat: repeat-y;
@@ -71,12 +71,12 @@ body {
 }
 
 .content-vitm #frm_register_vitm input {
-    margin-top: 20px;
-    margin-bottom: 27px;
+    margin-top: 30px;
+    margin-bottom: 10px;
     width: 89%;
     height: 72px;
     text-align: center;
-    font-size: 39px;
+    font-size: 35px;
     background-color: #ed6730;
     color: #fff;
     border: 3px solid #00ffff;
@@ -103,24 +103,29 @@ body {
 }
 
 .content-vitm .price-vitm-title {
-    margin-top: 131px;
+    margin-top: 80px;
     font-size: 43px;
     margin-left: 5px;
 }
 
 .content-vitm .price-vitm {
-    border-bottom: 2px solid #fff;
     padding-bottom: 36px;
     margin-top: 20px;
 }
 
 .content-vitm .footer-vitm {
     margin-top: 13px;
-    font-size: 30px;
+    font-size: 25px;
     padding-bottom: 20px;
     line-height: 38px;
     margin-left: 20px;
     font-family: sans-serif;
+}
+
+.footer-vitm .company-name {
+    font-size: 35px;
+    margin-top: 25px;
+    margin-bottom: 20px;
 }
 
 .content-vitm .midle-vitm {
@@ -144,6 +149,67 @@ body {
 .content-vitm #btn_loading {
     display: none;
     line-height: 50px;
+}
+
+.dash-footer-vitm {
+    border: 2px solid #fff;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.content-vitm #frm_register_vitm .input-captcha {
+    width: 30%;
+    height: 50px;
+    background-color: unset;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.line-captcha {
+    margin-top: 10px
+}
+
+.line-captcha img {
+    height: 40px;
+    width: 170px;
+    margin-bottom: 10px;
+}
+
+.line-captcha input {
+    height: 40px !important;
+    border-width: 2px !important;
+    padding-bottom: 0px !important;
+}
+
+.line-captcha #btn_change_captcha {
+    cursor: pointer;
+}
+
+.wrong_captcha {
+    display: none;
+}
+
+.price-vitm .fix-img-mobile {
+    display: none;
+}
+
+.content-vitm .donor-vitm img {
+    max-width: -webkit-fill-available;
+}
+
+.donor-vitm {
+    padding-bottom: 40px;
+}
+
+.donor-vitm .donor-vitm-title {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+input:focus {
+    outline-width: 0;
 }
 
 @media only screen and (min-width: 992px) {
@@ -183,6 +249,13 @@ body {
     .content-vitm .footer-vitm {
         font-size: 26px;
     }
+    .content-vitm .container {
+        background-image: url('../images/register-vitm/bg-register-vitm-mobile.png');
+        padding-top: 25px;
+    }
+    .content-vitm .price-vitm-title {
+        font-size: 30px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -215,9 +288,10 @@ body {
     }
     .content-vitm #frm_register_vitm input {
         height: 40px;
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 5px;
         padding-bottom: 6px;
+        border-width: 2px;
     }
     .content-vitm #frm_register_vitm #btn_render_code {
         height: 40px;
@@ -252,9 +326,54 @@ body {
         max-width: -webkit-fill-available;
         width: 49%;
     }
-    @media only screen and (min-width: 576px) {
-        .price-vitm img {
-            width: 100%;
-        }
+    .footer-vitm .company-name {
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .donor-vitm .donor-vitm-title {
+        font-size: 17px;
+        margin-left: unset;
+    }
+    .line-captcha img {
+        width: 130px;
+        height: 30px;
+    }
+    .content-vitm #frm_register_vitm .input-captcha {
+        height: 30px !important;
+        border-width: 2px !important;
+    }
+    .donor-vitm {
+        padding-bottom: 30px;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .price-vitm img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .price-vitm .fix-img-mobile {
+        display: inline;
+    }
+    .price-vitm .fix-img-pc {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 338px) {
+    .content-vitm .title-vitm {
+        font-size: 23px;
+    }
+    .content-vitm .price-vitm-title {
+        font-size: 16px;
+    }
+    .footer-vitm .company-name {
+        font-size: 16px;
+    }
+    .donor-vitm .donor-vitm-title {
+        font-size: 20px;
     }
 }

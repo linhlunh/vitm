@@ -29,9 +29,7 @@ class Register_Vitm_Model extends CI_Model
     {
         $this->db->where('link','vitm');
 
-        $this->db->where('email', $oauth_user['email']);
-
-        $this->db->or_where('phone', $oauth_user['phone']);
+        $this->db->where('(email = "'.$oauth_user['email'].'" OR phone = "'.$oauth_user['phone'].'")');
 
         $this->db->from('oauth_users');
 
